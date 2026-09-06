@@ -271,8 +271,35 @@
     });
   }
 
+  /* ---------- 8. Before/after compare sliders ----------------------- */
+  function initCompare() {
+    $$(".compare").forEach(function (box) {
+      var range = $(".compare-range", box);
+      if (!range) return;
+      var set = function (v) { v = Math.max(0, Math.min(100, v)); box.style.setProperty("--pos", v + "%"); range.value = v; };
+      range.addEventListener("input", function () { set(parseFloat(range.value)); });
+      // Pointer drag anywhere on the image (range input covers it, but this keeps it smooth on touch).
+      var dragging = false;
+      var fromEvent = function (e) { var r = box.getBoundingClientRect(); return ((e.clientX - r.left) / r.width) * 100; };
+      box.addEventListener("pointerdown", function (e) { dragging = true; set(fromEvent(e)); });
+      window.addEventListener("pointermove", function (e) { if (dragging) set(fromEvent(e)); });
+      window.addEventListener("pointerup", function () { dragging = false; });
+      // Gentle intro nudge the first time it scrolls into view.
+      if ("IntersectionObserver" in window && !(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches)) {
+        var io = new IntersectionObserver(function (entries) {
+          if (!entries[0].isIntersecting) return; io.disconnect();
+          var start = null, from = 50, to = 38;
+          var step = function (t) { if (!start) start = t; var k = Math.min(1, (t - start) / 700); var e = 1 - Math.pow(1 - k, 3); set(from + (to - from) * Math.sin(e * Math.PI)); if (k < 1 && !dragging) requestAnimationFrame(step); else if (!dragging) set(50); };
+          requestAnimationFrame(step);
+        }, { threshold: 0.6 });
+        io.observe(box);
+      }
+    });
+  }
+
   applyConfig();
   initHeader();
+  initCompare();
   initStickyCta();
   initReveal();
   initServiceLinks();

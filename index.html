@@ -26,9 +26,9 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Courgette&display=swap" rel="stylesheet">
 
-  <link rel="preload" as="image" href="assets/img/logo-400.png">
+  <link rel="preload" as="image" href="assets/img/work/hero.webp" type="image/webp">
   <link rel="stylesheet" href="assets/css/styles.css">
 
   <!-- ─────────────────────────────────────────────────────────────
@@ -75,6 +75,7 @@
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Hedge trimming and shaping" } },
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Garden clearance" } },
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Planting, borders and beds" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Patios, paving and shed bases" } },
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pressure washing" } },
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Regular garden maintenance" } }
     ]
@@ -95,6 +96,7 @@
     <nav class="site-nav" id="site-nav" aria-label="Main">
       <ul>
         <li><a href="#services">Services</a></li>
+        <li><a href="#work">Our work</a></li>
         <li><a href="#why">Why us</a></li>
         <li><a href="#how">How it works</a></li>
         <li><a href="#reviews">Reviews</a></li>
@@ -102,7 +104,7 @@
         <li><a href="#faq">FAQs</a></li>
         <li class="nav-mobile-only nav-cta">
           <a class="btn btn-primary btn-block" href="#quote">Get a free quote</a>
-          <a class="btn btn-block" href="tel:+447700900123" data-tel>Call <span data-phone>07700 900123</span></a>
+          <a class="btn btn-block alt" href="tel:+447700900123" data-tel>Call <span data-phone>07700 900123</span></a>
         </li>
       </ul>
     </nav>
@@ -112,7 +114,7 @@
         <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1L6.6 10.8Z" fill="currentColor"/></svg>
         <span data-phone>07700 900123</span>
       </a>
-      <a class="btn btn-primary btn-sm" href="#quote">Free quote</a>
+      <a class="btn btn-sm" href="#quote">Free quote</a>
       <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
         <span></span><span></span><span></span>
       </button>
@@ -124,19 +126,16 @@
 
 <!-- ========================================================= HERO -->
 <section class="hero" aria-labelledby="hero-title">
-  <div class="hero-bg" aria-hidden="true">
-    <svg class="hero-sun" viewBox="0 0 200 200"><circle cx="100" cy="100" r="100"/></svg>
-    <svg class="hero-hills" viewBox="0 0 1440 320" preserveAspectRatio="none">
-      <path class="hill hill-3" d="M0 220 C 240 140, 420 260, 720 200 S 1200 90, 1440 190 L1440 320 L0 320 Z"/>
-      <path class="hill hill-2" d="M0 260 C 200 200, 480 300, 760 250 S 1180 170, 1440 250 L1440 320 L0 320 Z"/>
-      <path class="hill hill-1" d="M0 300 C 300 260, 600 330, 900 290 S 1250 250, 1440 300 L1440 320 L0 320 Z"/>
-    </svg>
-  </div>
+  <picture class="hero-photo" aria-hidden="true">
+    <source srcset="assets/img/work/hero.webp" type="image/webp">
+    <img src="assets/img/work/hero.jpg" alt="" width="1039" height="368" fetchpriority="high">
+  </picture>
+  <div class="hero-shade" aria-hidden="true"></div>
 
   <div class="container hero-grid">
-    <div class="hero-copy reveal">
-      <p class="eyebrow"><span class="dot"></span> Gloucester's friendly local garden service</p>
-      <h1 id="hero-title">A garden you'll love coming home to.</h1>
+    <div class="hero-copy on-dark reveal">
+      <p class="brush-tag cream">Tidy gardens · Happier homes</p>
+      <h1 id="hero-title" class="title"><span class="caps">A garden you'll love</span><span class="script">coming home to.</span></h1>
       <p class="lead">Lawn care, hedges, clearances and regular maintenance across Gloucester and the surrounding villages. Reliable, fully insured and tidy — we take every last clipping away.</p>
 
       <ul class="hero-points">
@@ -164,9 +163,9 @@
     <!-- Quick quote card -->
     <div class="hero-card reveal" id="quick-quote">
       <div class="card-head">
-        <img src="assets/img/logo-mark-240.png" alt="" width="72" height="42">
+        <div class="badge badge-sm ring"><img src="assets/img/logo-mark-white.png" alt="" width="46" height="27"></div>
         <div>
-          <h2>Get a free quote</h2>
+          <h2>Get a free <span class="script">quote today</span></h2>
           <p>Takes 60 seconds. No obligation.</p>
         </div>
       </div>
@@ -192,7 +191,7 @@
               <option>Hedge trimming</option>
               <option>Garden clearance</option>
               <option>Planting &amp; borders</option>
-              <option>Tree &amp; shrub pruning</option>
+              <option>Patios, paving &amp; shed bases</option>
               <option>Pressure washing</option>
               <option>Turfing &amp; lawn renovation</option>
               <option>Regular maintenance</option>
@@ -217,19 +216,19 @@
   <div class="container">
     <ul class="trust-list">
       <li class="reveal">
-        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5l-8-3Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="m8.5 12 2.5 2.5 4.5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span class="circ"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5l-8-3Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="m8.5 12 2.5 2.5 4.5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         <div><strong>Fully insured</strong><span>Public liability cover on every job</span></div>
       </li>
       <li class="reveal">
-        <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 7v5l3.5 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span class="circ"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 7v5l3.5 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         <div><strong>Quotes in 24 hours</strong><span>Fast replies, clear fixed prices</span></div>
       </li>
       <li class="reveal">
-        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 20h18M5 20V9l7-5 7 5v11" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M10 20v-6h4v6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+        <span class="circ"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 20h18M5 20V9l7-5 7 5v11" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M10 20v-6h4v6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span>
         <div><strong>Local &amp; independent</strong><span>Based in Gloucester, not a franchise</span></div>
       </li>
       <li class="reveal">
-        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 7h11l3 3h2v7H4V7Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="8" cy="18" r="1.8" fill="currentColor"/><circle cx="17" cy="18" r="1.8" fill="currentColor"/></svg>
+        <span class="circ"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 7h11l3 3h2v7H4V7Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="8" cy="18" r="1.8" fill="currentColor"/><circle cx="17" cy="18" r="1.8" fill="currentColor"/></svg></span>
         <div><strong>Waste taken away</strong><span>Green waste removed, garden left spotless</span></div>
       </li>
     </ul>
@@ -237,11 +236,11 @@
 </section>
 
 <!-- ========================================================= SERVICES -->
-<section class="section services" id="services" aria-labelledby="services-title">
+<section class="section services wash leafy" id="services" aria-labelledby="services-title">
   <div class="container">
     <div class="section-head reveal">
-      <p class="eyebrow"><span class="dot"></span> What we do</p>
-      <h2 id="services-title">Everything your garden needs, all year round.</h2>
+      <p class="brush-tag">What we do</p>
+      <h2 id="services-title" class="title"><span class="caps">Everything your garden needs</span><span class="script">all year round.</span></h2>
       <p>From a one-off tidy to a garden that's cared for every fortnight. Pick a service and we'll send you a fixed-price quote.</p>
     </div>
 
@@ -259,8 +258,8 @@
         <div class="service-icon">
           <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 38h32" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M12 38V22c0-6 4-10 12-10s12 4 12 10v16" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linejoin="round"/><path d="M18 24l3 3 3-3 3 3 3-3" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
-        <h3>Hedge trimming &amp; shaping</h3>
-        <p>Neat, level and shaped properly — from small box hedges to tall conifers. Every clipping cleared away.</p>
+        <h3>Hedge trimming &amp; reduction</h3>
+        <p>Neat, level and shaped properly — from small box hedges to overgrown conifers brought back down to size. Every clipping cleared away.</p>
         <a href="#quote" class="service-link" data-service="Hedge trimming">Get a quote <span aria-hidden="true">→</span></a>
       </article>
 
@@ -268,8 +267,8 @@
         <div class="service-icon">
           <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 40h32M12 40l4-18h16l4 18" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linejoin="round"/><path d="M20 22c-2-6 0-10 4-14 4 4 6 8 4 14" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linejoin="round"/><path d="M24 22v18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
         </div>
-        <h3>Garden clearance</h3>
-        <p>Overgrown, neglected or just too much? We clear brambles, weeds and rubbish and leave you a blank canvas.</p>
+        <h3>Garden clearance &amp; restoration</h3>
+        <p>Overgrown, neglected or between tenants? We clear it, level it and bring it back — ideal for landlords and new homeowners.</p>
         <a href="#quote" class="service-link" data-service="Garden clearance">Get a quote <span aria-hidden="true">→</span></a>
       </article>
 
@@ -284,11 +283,11 @@
 
       <article class="service-card reveal">
         <div class="service-icon">
-          <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 42V24" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M24 26c-9 0-14-6-14-14 8 0 14 6 14 14Zm0-4c0-8 6-14 14-14 0 8-5 14-14 14Z" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linejoin="round"/><path d="M30 38l6 4M36 38l-6 4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+          <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M6 30l18-10 18 10-18 10L6 30Z" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linejoin="round"/><path d="M15 25l18 10M24 20v20M33 25 15 35" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M6 30v4l18 10 18-10v-4" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linejoin="round"/></svg>
         </div>
-        <h3>Tree &amp; shrub pruning</h3>
-        <p>Careful pruning of shrubs, fruit trees and small trees to keep them healthy, tidy and the right size for your space.</p>
-        <a href="#quote" class="service-link" data-service="Tree &amp; shrub pruning">Get a quote <span aria-hidden="true">→</span></a>
+        <h3>Patios, paving &amp; shed bases</h3>
+        <p>Freshly laid patios, paths and raised shed bases that are level, solid and built to last — more usable space for your garden.</p>
+        <a href="#quote" class="service-link" data-service="Patios, paving &amp; shed bases">Get a quote <span aria-hidden="true">→</span></a>
       </article>
 
       <article class="service-card reveal">
@@ -324,47 +323,149 @@
   </div>
 </section>
 
+<!-- ========================================================= RECENT WORK -->
+<section class="section work" id="work" aria-labelledby="work-title">
+  <div class="container">
+    <div class="section-head center reveal">
+      <p class="brush-tag">Recent transformations</p>
+      <h2 id="work-title" class="title"><span class="caps">Real gardens, real results</span><span class="script">see the difference.</span></h2>
+      <p>Drag the slider on each photo to compare before and after. All work by our own team, in and around Gloucester.</p>
+    </div>
+
+    <div class="work-grid">
+      <article class="work-item wide reveal">
+        <div class="frame">
+          <div class="compare" style="aspect-ratio: 1032 / 315">
+            <picture><source srcset="assets/img/work/garden-restoration-before.webp" type="image/webp"><img class="compare-before" src="assets/img/work/garden-restoration-before.jpg" alt="Before: overgrown rental garden with weeds through the paving and a collapsing wall" loading="lazy" width="1032" height="315"></picture>
+            <picture><source srcset="assets/img/work/garden-restoration-after.webp" type="image/webp"><img class="compare-after" src="assets/img/work/garden-restoration-after.jpg" alt="After: restored garden with new lawn, curved gravel path, planted borders and painted fence" loading="lazy" width="1032" height="315"></picture>
+            <div class="compare-handle" aria-hidden="true"></div>
+            <input type="range" class="compare-range" min="0" max="100" value="50" aria-label="Compare before and after">
+            <span class="compare-label before" aria-hidden="true">Before</span><span class="compare-label after" aria-hidden="true">After</span>
+          </div>
+        </div>
+        <div class="work-caption">
+          <p class="brush-tag">Garden clearance &amp; restoration</p>
+          <h3>Landlord <span class="script">garden restoration</span></h3>
+          <p>An overgrown rental garden completely cleared, levelled and rebuilt: fresh turf, a curved gravel path, planted borders and a smart painted fence. Tidy garden, happier tenants.</p>
+          <a class="link-arrow" href="#quote" data-service="Garden clearance">Restore my garden <span aria-hidden="true">→</span></a>
+        </div>
+      </article>
+
+      <article class="work-item reveal">
+        <div class="frame">
+          <div class="compare" style="aspect-ratio: 507 / 720">
+            <picture><source srcset="assets/img/work/patio-before.webp" type="image/webp"><img class="compare-before" src="assets/img/work/patio-before.jpg" alt="Before: patchy slabs and bare gravel in a small back garden" loading="lazy" width="507" height="720"></picture>
+            <picture><source srcset="assets/img/work/patio-after.webp" type="image/webp"><img class="compare-after" src="assets/img/work/patio-after.jpg" alt="After: freshly laid buff patio with dining furniture" loading="lazy" width="507" height="720"></picture>
+            <div class="compare-handle" aria-hidden="true"></div>
+            <input type="range" class="compare-range" min="0" max="100" value="50" aria-label="Compare before and after">
+            <span class="compare-label before" aria-hidden="true">Before</span><span class="compare-label after" aria-hidden="true">After</span>
+          </div>
+        </div>
+        <div class="work-caption">
+          <p class="brush-tag">Patios &amp; paving</p>
+          <h3>Freshly laid <span class="script">patio</span></h3>
+          <p>Tired slabs and gravel replaced with a clean, level patio. Cleaner space, modern look and a lot more usable garden.</p>
+          <a class="link-arrow" href="#quote" data-service="Patios, paving &amp; shed bases">Quote my patio <span aria-hidden="true">→</span></a>
+        </div>
+      </article>
+
+      <article class="work-item reveal">
+        <div class="frame">
+          <div class="pair">
+            <picture><source srcset="assets/img/work/shed-1.webp" type="image/webp"><img src="assets/img/work/shed-1.jpg" alt="New timber shed on a raised sleeper base, front view" loading="lazy" width="497" height="713"></picture>
+            <picture><source srcset="assets/img/work/shed-2.webp" type="image/webp"><img src="assets/img/work/shed-2.jpg" alt="New timber shed on a raised sleeper base, side view" loading="lazy" width="497" height="713"></picture>
+          </div>
+        </div>
+        <div class="work-caption">
+          <p class="brush-tag">Shed bases</p>
+          <h3>Raised shed base <span class="script">&amp; shed</span></h3>
+          <p>A solid raised sleeper base with paved top, then the shed built on it. Stronger base, smarter space, built to last.</p>
+          <a class="link-arrow" href="#quote" data-service="Patios, paving &amp; shed bases">Ask about a shed base <span aria-hidden="true">→</span></a>
+        </div>
+      </article>
+
+      <article class="work-item wide reveal">
+        <div class="frame">
+          <div class="compare" style="aspect-ratio: 1600 / 791">
+            <picture><source srcset="assets/img/work/hedge-before.webp" type="image/webp"><img class="compare-before" src="assets/img/work/hedge-before.jpg" alt="Before: a huge overgrown conifer hedge towering over a back garden" loading="lazy" width="1600" height="791"></picture>
+            <picture><source srcset="assets/img/work/hedge-after.webp" type="image/webp"><img class="compare-after" src="assets/img/work/hedge-after.jpg" alt="After: the same hedge reduced, squared off and tidy, with the lawn freshly cut" loading="lazy" width="1600" height="791"></picture>
+            <div class="compare-handle" aria-hidden="true"></div>
+            <input type="range" class="compare-range" min="0" max="100" value="50" aria-label="Compare before and after">
+            <span class="compare-label before" aria-hidden="true">Before</span><span class="compare-label after" aria-hidden="true">After</span>
+          </div>
+        </div>
+        <div class="work-caption">
+          <p class="brush-tag">Hedge trimming &amp; reduction</p>
+          <h3>Conifer hedge <span class="script">reduction</span></h3>
+          <p>A hedge that had taken over the garden brought back down to size, squared off and tidied, with every branch taken away. Light and space restored.</p>
+          <a class="link-arrow" href="#quote" data-service="Hedge trimming">Tame my hedge <span aria-hidden="true">→</span></a>
+        </div>
+      </article>
+
+      <article class="work-item wide reveal">
+        <div class="frame">
+          <div class="compare" style="aspect-ratio: 833 / 253">
+            <picture><source srcset="assets/img/work/patio-corner-before.webp" type="image/webp"><img class="compare-before" src="assets/img/work/patio-corner-before.jpg" alt="Before: uneven old slabs in a garden corner" loading="lazy" width="833" height="253"></picture>
+            <picture><source srcset="assets/img/work/patio-corner-after.webp" type="image/webp"><img class="compare-after" src="assets/img/work/patio-corner-after.jpg" alt="After: a new paved patio area with potted plants" loading="lazy" width="833" height="253"></picture>
+            <div class="compare-handle" aria-hidden="true"></div>
+            <input type="range" class="compare-range" min="0" max="100" value="50" aria-label="Compare before and after">
+            <span class="compare-label before" aria-hidden="true">Before</span><span class="compare-label after" aria-hidden="true">After</span>
+          </div>
+        </div>
+        <div class="work-caption">
+          <p class="brush-tag">Patios &amp; paving</p>
+          <h3>Patio area <span class="script">transformation</span></h3>
+          <p>Old, uneven slabs lifted and a new paved seating area laid to fit the space, with the borders tidied to finish.</p>
+          <a class="link-arrow" href="#quote" data-service="Patios, paving &amp; shed bases">Transform my patio <span aria-hidden="true">→</span></a>
+        </div>
+      </article>
+    </div>
+
+    <div class="how-cta reveal">
+      <a class="btn btn-primary btn-lg" href="#quote">Get in touch today</a>
+      <span>Free quote, usually within 24 hours.</span>
+    </div>
+  </div>
+</section>
+
 <!-- ========================================================= WHY US -->
-<section class="section why" id="why" aria-labelledby="why-title">
+<section class="section why wash leafy" id="why" aria-labelledby="why-title">
   <div class="container why-grid">
     <div class="why-visual reveal" aria-hidden="true">
-      <div class="why-frame">
-        <img src="assets/img/logo-400.png" alt="" width="400" height="304" loading="lazy">
-        <svg class="why-stripes" viewBox="0 0 400 140" preserveAspectRatio="none">
-          <path d="M0 140 L0 60 Q200 20 400 60 L400 140 Z" class="s1"/>
-          <path d="M0 140 L0 80 Q200 45 400 80 L400 140 Z" class="s2"/>
-          <path d="M0 140 L0 100 Q200 70 400 100 L400 140 Z" class="s3"/>
-          <path d="M0 140 L0 120 Q200 95 400 120 L400 140 Z" class="s4"/>
-        </svg>
+      <div class="frame">
+        <picture>
+          <source srcset="assets/img/work/patio-after.webp" type="image/webp">
+          <img src="assets/img/work/patio-after.jpg" alt="Newly laid patio with garden furniture, by Gloucester Garden Services" width="507" height="720" loading="lazy">
+        </picture>
       </div>
-      <div class="why-badge">
+      <div class="why-badge badge ring">
         <strong>100%</strong>
-        <span>green waste removed on every visit</span>
+        <span>waste removed every visit</span>
       </div>
     </div>
 
     <div class="why-copy">
       <div class="section-head reveal">
-        <p class="eyebrow"><span class="dot"></span> Why Gloucester Garden Services</p>
-        <h2 id="why-title">The gardener who actually turns up.</h2>
+        <p class="brush-tag">Why Gloucester Garden Services</p>
+        <h2 id="why-title" class="title"><span class="caps">The gardener who</span><span class="script">actually turns up.</span></h2>
         <p>We know the frustrations: quotes that never arrive, gardeners who vanish, clippings left on the lawn. We built our business to be the opposite.</p>
       </div>
 
       <ul class="why-list">
         <li class="reveal">
-          <span class="why-num">01</span>
+          <span class="why-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 7v5l3.5 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
           <div><strong>Reliable, every time</strong><p>We agree a date and time — and we keep it. If weather ever forces a change, you'll hear from us first.</p></div>
         </li>
         <li class="reveal">
-          <span class="why-num">02</span>
+          <span class="why-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8 10h8M8 14h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
           <div><strong>Clear, fixed prices</strong><p>Your quote is the price you pay. No hidden extras, no "it took longer than expected".</p></div>
         </li>
         <li class="reveal">
-          <span class="why-num">03</span>
+          <span class="why-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20c4-1 7-3 9-6l3-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M16 10c-3 0-5-2-5-5 3 0 5 2 5 5Zm0 0c3 0 5-2 5-5-3 0-5 2-5 5Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span>
           <div><strong>Spotless finish</strong><p>Paths swept, clippings bagged, waste taken away. You'll only know we've been by how good the garden looks.</p></div>
         </li>
         <li class="reveal">
-          <span class="why-num">04</span>
+          <span class="why-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 5 5.5v5.5c0 4.5 3 8.5 7 10 4-1.5 7-5.5 7-10V5.5L12 3Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="m9 12 2 2 4-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
           <div><strong>Fully insured &amp; professional</strong><p>Public liability insurance, professional equipment and a friendly team who treat your home with respect.</p></div>
         </li>
       </ul>
@@ -381,8 +482,8 @@
 <section class="section how" id="how" aria-labelledby="how-title">
   <div class="container">
     <div class="section-head center reveal">
-      <p class="eyebrow"><span class="dot"></span> Simple from start to finish</p>
-      <h2 id="how-title">Three easy steps to a better garden.</h2>
+      <p class="brush-tag">Simple from start to finish</p>
+      <h2 id="how-title" class="title"><span class="caps">Three easy steps</span><span class="script">to a better garden.</span></h2>
     </div>
 
     <ol class="steps">
@@ -424,11 +525,11 @@
 </section>
 
 <!-- ========================================================= REVIEWS -->
-<section class="section reviews" id="reviews" aria-labelledby="reviews-title">
+<section class="section reviews wash leafy" id="reviews" aria-labelledby="reviews-title">
   <div class="container">
     <div class="section-head center reveal">
-      <p class="eyebrow"><span class="dot"></span> Kind words</p>
-      <h2 id="reviews-title">Gardens across Gloucester, happy owners to match.</h2>
+      <p class="brush-tag">Kind words</p>
+      <h2 id="reviews-title" class="title"><span class="caps">Gardens across Gloucester</span><span class="script">happy owners to match.</span></h2>
       <p class="stars-big" aria-label="Five star rated">★★★★★</p>
     </div>
 
@@ -462,8 +563,8 @@
 <section class="section areas" id="areas" aria-labelledby="areas-title">
   <div class="container areas-grid">
     <div class="section-head reveal">
-      <p class="eyebrow"><span class="dot"></span> Where we work</p>
-      <h2 id="areas-title">Proudly serving Gloucester and the villages around it.</h2>
+      <p class="brush-tag">Where we work</p>
+      <h2 id="areas-title" class="title"><span class="caps">Proudly serving Gloucester</span><span class="script">and the villages around it.</span></h2>
       <p>We're based in Gloucester and cover the whole city plus the surrounding area. If you're a little further out, ask — we can often help.</p>
       <a class="btn btn-primary" href="#quote">Check we cover you</a>
     </div>
@@ -477,11 +578,11 @@
 </section>
 
 <!-- ========================================================= FAQ -->
-<section class="section faq" id="faq" aria-labelledby="faq-title">
+<section class="section faq wash" id="faq" aria-labelledby="faq-title">
   <div class="container faq-grid">
     <div class="section-head reveal">
-      <p class="eyebrow"><span class="dot"></span> Good to know</p>
-      <h2 id="faq-title">Questions we're often asked.</h2>
+      <p class="brush-tag">Good to know</p>
+      <h2 id="faq-title" class="title"><span class="caps">Questions we're</span><span class="script">often asked.</span></h2>
       <p>Anything else? <a href="#quote">Send us a message</a> or give us a call — we're happy to chat things through.</p>
     </div>
     <div class="faq-list reveal">
@@ -519,13 +620,10 @@
 
 <!-- ========================================================= QUOTE / CONTACT -->
 <section class="section quote" id="quote" aria-labelledby="quote-title">
-  <div class="quote-bg" aria-hidden="true">
-    <svg viewBox="0 0 1440 160" preserveAspectRatio="none"><path d="M0 0 H1440 V70 C1260 130 1060 40 880 80 C620 140 300 20 0 110 Z"/></svg>
-  </div>
   <div class="container quote-grid">
-    <div class="quote-copy reveal">
-      <p class="eyebrow light"><span class="dot"></span> Free, no-obligation quote</p>
-      <h2 id="quote-title">Ready for a garden you're proud of?</h2>
+    <div class="quote-copy on-dark reveal">
+      <p class="brush-tag cream">Free, no-obligation quote</p>
+      <h2 id="quote-title" class="title"><span class="caps">Ready to transform</span><span class="script">your outdoor space?</span></h2>
       <p>Tell us a little about your garden and what you'd like done. We'll be in touch within one working day with a clear, fixed-price quote.</p>
 
       <ul class="quote-points">
@@ -581,7 +679,7 @@
             <option>Hedge trimming</option>
             <option>Garden clearance</option>
             <option>Planting &amp; borders</option>
-            <option>Tree &amp; shrub pruning</option>
+            <option>Patios, paving &amp; shed bases</option>
             <option>Pressure washing</option>
             <option>Turfing &amp; lawn renovation</option>
             <option>Regular maintenance</option>
@@ -616,7 +714,7 @@
 <footer class="site-footer">
   <div class="container footer-grid">
     <div class="footer-brand">
-      <img src="assets/img/logo-400.png" alt="Gloucester Garden Services" width="200" height="152" loading="lazy">
+      <img src="assets/img/logo-white.png" alt="Gloucester Garden Services" width="200" height="152" loading="lazy">
       <p>Friendly, reliable garden care for homes across Gloucester and the surrounding villages.</p>
     </div>
     <div class="footer-col">
@@ -626,13 +724,14 @@
         <li><a href="#services">Hedge trimming</a></li>
         <li><a href="#services">Garden clearance</a></li>
         <li><a href="#services">Planting &amp; borders</a></li>
-        <li><a href="#services">Pressure washing</a></li>
+        <li><a href="#services">Patios &amp; shed bases</a></li>
         <li><a href="#services">Regular maintenance</a></li>
       </ul>
     </div>
     <div class="footer-col">
       <h3>Company</h3>
       <ul>
+        <li><a href="#work">Recent work</a></li>
         <li><a href="#why">Why choose us</a></li>
         <li><a href="#how">How it works</a></li>
         <li><a href="#reviews">Reviews</a></li>
