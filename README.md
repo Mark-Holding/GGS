@@ -22,8 +22,10 @@ static host (Netlify, Cloudflare Pages, GitHub Pages, cPanel…) and it works.
    The phone number currently in the file (`07700 900123`) is a placeholder, not a real number.
    Also update the phone number and email in the `LocalBusiness` JSON block just below it
    (Google reads that one directly).
-2. **Domain.** Search-and-replace `www.gloucestergardenservices.co.uk` with your real domain
-   (in `index.html`, `robots.txt` and `sitemap.xml`).
+2. **Domain.** The site lives at `www.gloucestergardenservices.co.uk` (set in `CNAME`, `index.html`,
+   `robots.txt` and `sitemap.xml`). Hosting is GitHub Pages, deployed by `.github/workflows/pages.yml`
+   on every push. DNS at Namecheap: four A records on `@` pointing at GitHub Pages
+   (185.199.108.153, .109.153, .110.153, .111.153) and a CNAME on `www` to `mark-holding.github.io`.
 3. **Quote form delivery.** Choose one `formMode` in the settings block:
    - `"mailto"` (default): opens the visitor's email app with the request pre-filled. Works
      anywhere, no setup, but relies on the visitor having an email app configured.
