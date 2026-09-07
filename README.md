@@ -1,6 +1,6 @@
 # Gloucester Garden Services — website
 
-A fast, mobile-first, single-page website built to turn visitors into quote requests.
+A fast, mobile-first, single-page website for a Gloucester landscape gardener, built to turn visitors into quote requests.
 Plain HTML, CSS and JavaScript — no build step, no framework. Upload the folder to any
 static host (Netlify, Cloudflare Pages, GitHub Pages, cPanel…) and it works.
 
